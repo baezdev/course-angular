@@ -1,0 +1,9 @@
+<aside class="px-2 py-4 max-w-72 h-screen w-full">
+  <h1 class="text-2xl font-semibold mb-4 text-center">Gifs App</h1>
+  <ul class="menu bg-base-200 rounded-box">
+    <li class="menu-title">Historial</li>
+    <li *ngFor="let tag of tagsHistory">
+      <button (click)="searchGif(tag)">{{ tag | titlecase }}</button>
+    </li>
+  </ul>
+</aside>

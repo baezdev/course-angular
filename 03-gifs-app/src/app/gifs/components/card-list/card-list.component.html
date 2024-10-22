@@ -1,0 +1,9 @@
+<ul class="columns-3 gap-4">
+  <li class="w-full" *ngFor="let gif of gifs">
+    <img
+      class="w-full rounded-xl h-auto object-cover mb-4"
+      [src]="gif.images.downsized_medium.url"
+      [alt]="gif.alt_text"
+    />
+  </li>
+</ul>
