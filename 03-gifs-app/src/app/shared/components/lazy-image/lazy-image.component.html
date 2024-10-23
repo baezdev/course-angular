@@ -1,0 +1,10 @@
+<div>
+  <img
+    [src]="url"
+    [alt]="alt"
+    class="w-full rounded-xl h-auto mb-4 animate__animated animate__fadeIn"
+    (load)="onLoad()"
+    [ngStyle]="{ display: isLoaded ? '' : 'none' }"
+  />
+  <div class="skeleton rounded-xl w-full mb-4 h-80" *ngIf="!isLoaded"></div>
+</div>
