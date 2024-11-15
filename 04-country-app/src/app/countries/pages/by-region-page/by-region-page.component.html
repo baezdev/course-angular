@@ -1,0 +1,23 @@
+<div class="relative overflow-x-auto shadow-md">
+  <section class="max-w-md mb-5">
+    <!-- <shared-search-bar
+      placeholder="Buscar por región"
+      (onValueDebouce)="handleSearchByRegion($event)"
+    ></shared-search-bar> -->
+
+    <div class="inline-flex shadow-sm" role="group">
+      <button
+        *ngFor="let region of regions"
+        (click)="handleSearchByRegion(region)"
+        type="button"
+        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700"
+        [ngClass]="{
+          'bg-blue-700 dark:bg-blue-700': region === selectedRegion
+        }"
+      >
+        {{ region }}
+      </button>
+    </div>
+  </section>
+  <countries-table [countries]="countries"></countries-table>
+</div>

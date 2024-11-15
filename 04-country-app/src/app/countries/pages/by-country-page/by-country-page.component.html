@@ -1,0 +1,10 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <section class="max-w-md mb-5">
+    <shared-search-bar
+      [initialValue]="searchDefaultValue"
+      placeholder="Buscar por nombre del país"
+      (onValueDebouce)="handleSearchByName($event)"
+    ></shared-search-bar>
+  </section>
+  <countries-table [countries]="countries"></countries-table>
+</div>
